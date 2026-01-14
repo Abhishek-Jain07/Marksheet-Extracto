@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Marksheet Extractor</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>AI Marksheet Extractor</h1>
+            <p>Upload a marksheet (Image/PDF) to extract data instantly.</p>
+        </header>
+
+        <main class="app-interface">
+            <section class="upload-section">
+                <div class="drop-zone" id="drop-zone">
+                    <p>Drag & Drop files here or <span>Browse</span></p>
+                    <input type="file" id="file-input" accept="image/*,application/pdf" hidden>
+                </div>
+                <div id="preview-container" class="hidden">
+                    <h3>Preview</h3>
+                    <img id="image-preview" src="" alt="Preview">
+                    <p id="file-name"></p>
+                </div>
+                <button id="extract-btn" class="primary-btn" disabled>Extract Data</button>
+            </section>
+
+            <section class="result-section">
+                <div class="tabs">
+                    <button class="tab-btn active" data-tab="json">JSON Output</button>
+                    <button class="tab-btn" data-tab="formatted">Formatted</button>
+                </div>
+                
+                <div id="loader" class="hidden">
+                    <div class="spinner"></div>
+                    <p>Analyzing document...</p>
+                </div>
+
+                <div id="json-view" class="view-content active">
+                    <pre id="json-output">// Extracted data will appear here...</pre>
+                </div>
+
+                <div id="formatted-view" class="view-content hidden">
+                    <div id="formatted-content">
+                        <!-- Dynamic content -->
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
