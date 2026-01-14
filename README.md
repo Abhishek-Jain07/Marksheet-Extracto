@@ -3,7 +3,7 @@
 An AI-powered FastAPI application that extracts structured data from marksheet images and PDFs using Google Gemini.
 
 ## Features
-- **Accurate Extraction**: Uses LLM (Gemini 1.5 Flash) to parse candidate details, subjects, and marks.
+- **Accurate Extraction**: Uses LLM (Gemini 2.5 Flash) to parse candidate details, subjects, and marks.
 - **Robustness**: Handles Images (JPG, PNG, WEBP) and PDFs.
 - **Validation**: Enforces JSON schema using Pydantic models.
 - **Confidence Scoring**: Provides confidence levels for extracted fields.
